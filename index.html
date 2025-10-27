@@ -34,6 +34,17 @@
             text-decoration: none !important;
             letter-spacing: 0.5px !important;
         }
+        
+        /* Project cards spacing */
+        .folio-entries .entry {
+            margin-bottom: 3rem !important;
+        }
+        
+        @media screen and (max-width: 900px) {
+            .folio-entries .entry {
+                margin-bottom: 2rem !important;
+            }
+        }
     </style>
 
     <!-- favicons
@@ -198,13 +209,34 @@
                     <div class="section-header" data-num="02">
                         <h2 class="text-display-title">Projects.</h2>
                     </div> <!-- end section-header -->
+                    <p class="attention-getter">
+                    Click on any project card below to view detailed descriptions, technologies used, and access the GitHub repository links.
+                    </p>
                 </div>
             </div>
 
             <div class="row folio-entries">
 
                 <div class="column entry">
-                    <a href="images/folio/academixpro.png" class="entry__link glightbox" data-glightbox="title: AcademixPro; description: .entry__desc-01">
+                    <a href="images/folio/stemeet.PNG" class="entry__link glightbox" data-glightbox="title: STEMeet; description: .entry__desc-01">
+                        <div class="entry__thumb">
+                            <img src="images/folio/stemeet.PNG" alt="STEMeet Project">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">STEMeet</h4>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-01">
+                        <p>
+                        STEMeet is a social platform built to connect students, professionals, and STEM enthusiasts. Developed for Lab 2 course using Django REST Framework, React.js, MySQL, and JWT authentication. Key features include an AI Assistant powered by OpenAI GPT-4o mini API for scientific questions and project suggestions, real-time communication with modern chat and video calls via WebSockets, professional networking to find and add friends, collaborative project management with role-based access, and advanced personal profiles showcasing experience and contributions to the STEM community.
+                        <a href="https://github.com/ArbSahatqijaa/SingularityExpress">View on GitHub</a>.
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/academixpro.png" class="entry__link glightbox" data-glightbox="title: AcademixPro; description: .entry__desc-02">
                         <div class="entry__thumb">
                             <img src="images/folio/academixpro.png" alt="AcademixPro Project">
                         </div>
@@ -213,30 +245,10 @@
                         </div>
                     </a>
 
-                    <div class="glightbox-desc entry__desc-01">
+                    <div class="glightbox-desc entry__desc-02">
                         <p>
                         AcademixPro is a school management system built with Laravel, React, and MySQL, designed to streamline academic operations for both students and professors. The platform provides an intuitive interface for managing academic activities efficiently. For students, it offers personalized dashboards to view grades and GPA, access lecture schedules, choose study groups, and register for semesters. For professors, it provides tools for grading students, adding lectures, and recording attendance. AcademixPro combines functionality with simplicity, ensuring a centralized and reliable system for academic workflows.
                         <a href="https://github.com/Blend06/EMSS">View on GitHub</a>.
-                        </p>
-                    </div>
-                </div> <!-- entry -->
-
-                <div class="column entry">
-                    <a href="images/folio/bird.png" class="entry__link glightbox" data-glightbox="title: Bird Tracker; description: .entry__desc-02">
-                        <div class="entry__thumb">
-                            <img src="images/folio/bird.png" alt="Bird Tracker Project">
-                        </div>
-                        <div class="entry__info">
-                            <h4 class="entry__title">Bird Tracker</h4>
-                        </div>
-                    </a>
-
-                    <div class="glightbox-desc entry__desc-02">
-                        <p>
-                        A mobile application for bird watching enthusiasts to track and identify 
-                        different bird species. Includes GPS location tracking, photo capture, 
-                        and a comprehensive bird database with detailed information.
-                        <a href="https://github.com/Blend06/Birds_Game">View on GitHub</a>.
                         </p>
                     </div>
                 </div> <!-- entry -->
@@ -260,25 +272,7 @@
                 </div> <!-- entry -->
 
                 <div class="column entry">
-                    <a href="images/folio/stemeet.PNG" class="entry__link glightbox" data-glightbox="title: STEMeet; description: .entry__desc-04">
-                        <div class="entry__thumb">
-                            <img src="images/folio/stemeet.PNG" alt="STEMeet Project">
-                        </div>
-                        <div class="entry__info">
-                            <h4 class="entry__title">STEMeet</h4>
-                        </div>
-                    </a>
-
-                    <div class="glightbox-desc entry__desc-04">
-                        <p>
-                        STEMeet is a social platform built to connect students, professionals, and STEM enthusiasts. Developed for Lab 2 course using Django REST Framework, React.js, MySQL, and JWT authentication. Key features include an AI Assistant powered by OpenAI GPT-4o mini API for scientific questions and project suggestions, real-time communication with modern chat and video calls via WebSockets, professional networking to find and add friends, collaborative project management with role-based access, and advanced personal profiles showcasing experience and contributions to the STEM community.
-                        <a href="https://github.com/ArbSahatqijaa/SingularityExpress">View on GitHub</a>.
-                        </p>
-                    </div>
-                </div> <!-- entry -->
-
-                <div class="column entry">
-                    <a href="images/folio/Transify.png" class="entry__link glightbox" data-glightbox="title: Transify; description: .entry__desc-05">
+                    <a href="images/folio/Transify.png" class="entry__link glightbox" data-glightbox="title: Transify; description: .entry__desc-04">
                         <div class="entry__thumb">
                             <img src="images/folio/Transify.png" alt="Transify Project">
                         </div>
@@ -287,10 +281,30 @@
                         </div>
                     </a>
 
-                    <div class="glightbox-desc entry__desc-05">
+                    <div class="glightbox-desc entry__desc-04">
                         <p>
                         Transify is a comprehensive transportation management platform built with ASP.NET Core 8.0 and Entity Framework. The system provides unified management for both bus and taxi services with multi-role dashboards for administrators, business owners, and drivers. Key features include real-time booking and reservation management, route planning, fleet coordination, company management support, and role-based access control. The platform offers search and filter capabilities, business analytics, review systems, and a responsive Bootstrap interface for seamless user experience across all devices.
                         <a href="https://github.com/Blend06/Bus_Schedule_System">View on GitHub</a>.
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/bird.png" class="entry__link glightbox" data-glightbox="title: Bird Tracker; description: .entry__desc-05">
+                        <div class="entry__thumb">
+                            <img src="images/folio/bird.png" alt="Bird Tracker Project">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Bird Tracker</h4>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-05">
+                        <p>
+                        A mobile application for bird watching enthusiasts to track and identify 
+                        different bird species. Includes GPS location tracking, photo capture, 
+                        and a comprehensive bird database with detailed information.
+                        <a href="https://github.com/Blend06/Birds_Game">View on GitHub</a>.
                         </p>
                     </div>
                 </div> <!-- entry -->
