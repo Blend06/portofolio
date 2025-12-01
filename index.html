@@ -35,6 +35,40 @@
             letter-spacing: 0.5px !important;
         }
         
+        /* Profile image sizing */
+        .s-intro__content-media {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            padding-top: 8rem !important;
+        }
+        
+        .s-intro__content-media img {
+            width: 100% !important;
+            height: auto !important;
+            max-width: 500px !important;
+            display: block !important;
+        }
+        
+        @media screen and (max-width: 900px) {
+            .s-intro__content-media {
+                padding-top: 4rem !important;
+            }
+        }
+        
+        /* Get My CV button - solid white */
+        .s-intro__btn-download .btn {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            border: 2px solid #ffffff !important;
+        }
+        
+        .s-intro__btn-download .btn:hover {
+            background-color: hsla(12, 75%, 45%, 1) !important;
+            color: #ffffff !important;
+            border: 2px solid hsla(12, 75%, 45%, 1) !important;
+        }
+        
         /* Project cards spacing */
         .folio-entries .entry {
             margin-bottom: 3rem !important;
