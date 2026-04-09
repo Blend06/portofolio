@@ -21,9 +21,10 @@
     <!-- Custom Styles
     ================================================== -->
     <style>
+        .s-about__list .skill-title,
         .skill-title {
             color: hsla(12, 75%, 45%, 1) !important;
-            font-weight: bold;
+            font-weight: bold !important;
         }
         
         .s-header__logo .logo {
@@ -35,14 +36,93 @@
             letter-spacing: 0.5px !important;
         }
         
-        /* Project cards spacing */
+        /* Project cards styling */
         .folio-entries .entry {
             margin-bottom: 3rem !important;
+        }
+        
+        .folio-entries .entry .entry__link {
+            display: block;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .folio-entries .entry .entry__link:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+        
+        .folio-entries .entry .entry__thumb {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .folio-entries .entry .entry__thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .folio-entries .entry .entry__link:hover .entry__thumb img {
+            transform: scale(1.05);
+        }
+        
+        .folio-entries .entry .entry__info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+        
+        .folio-entries .entry .entry__link:hover .entry__info {
+            opacity: 1;
+        }
+        
+        .folio-entries .entry .entry__link:hover::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        
+        .folio-entries .entry .entry__title {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #fff;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+            position: relative;
+            z-index: 2;
         }
         
         @media screen and (max-width: 900px) {
             .folio-entries .entry {
                 margin-bottom: 2rem !important;
+            }
+            
+            .folio-entries .entry .entry__thumb {
+                height: 220px;
+            }
+            
+            .folio-entries .entry .entry__title {
+                font-size: 1.3rem;
             }
         }
     </style>
@@ -186,7 +266,10 @@
                                     <span class="skill-title">Problem Solving & Algorithms:</span> Strong analytical skills, capable of breaking down complex problems into practical solutions. Experience with data structures, algorithms, and optimization.
                                 </li>
                                 <li>
-                                    <span class="skill-title">Collaboration & Version Control:</span> Experienced with team-based development, Docker & Docker Desktop, Git, GitHub, GitLab and agile workflows. Proficient in project management, code reviews, collaborative development practices, CI/CD Pipelines, and software testing.
+                                    <span class="skill-title">Collaboration & Version Control:</span> Experienced in team-based software development using modern collaboration workflows. Proficient with Git-based version control platforms including GitHub and GitLab, following Agile methodologies for iterative development. Skilled in project management, code reviews, and collaborative development practices, ensuring maintainable and well-structured code within team environments.
+                                </li>
+                                <li>
+                                    <span class="skill-title">Deployment, DevOps & Cloud Services:</span> Knowledge of modern deployment and DevOps practices for building and maintaining scalable applications. Experience with Docker and Docker Desktop, CI/CD pipelines, and software testing workflows. Familiar with PaaS cloud deployment services, including frontend deployment on Vercel, Netlify, and Cloudflare, backend deployment using Railway, and experience utilizing AWS services for scalable cloud infrastructure.
                                 </li>
                             </ul>
                         </div> <!--end s-about__block -->
@@ -309,26 +392,24 @@
                 </div> <!-- entry -->
 
                 <div class="column entry">
-                    <a href="images/folio/bird.png" class="entry__link glightbox" data-glightbox="title: Bird Tracker; description: .entry__desc-05">
+                    <a href="images/folio/reservo.png" class="entry__link glightbox" data-glightbox="title: Reservo - Multi-Tenant Reservation SaaS; description: .entry__desc-05">
                         <div class="entry__thumb">
-                            <img src="images/folio/bird.png" alt="Bird Tracker Project">
+                            <img src="images/folio/reservo.png" alt="Reservo Project">
                         </div>
                         <div class="entry__info">
-                            <h4 class="entry__title">Bird Tracker</h4>
+                            <h4 class="entry__title">Reservo - Multi-Tenant Reservation SaaS</h4>
                         </div>
                     </a>
 
                     <div class="glightbox-desc entry__desc-05">
                         <p>
-                        A mobile application for bird watching enthusiasts to track and identify 
-                        different bird species. Includes GPS location tracking, photo capture, 
-                        and a comprehensive bird database with detailed information.
-                        <a href="https://github.com/Blend06/Birds_Game">View on GitHub</a>.
+                        A multi-tenant SaaS platform built with Django, React, and PostgreSQL that enables businesses like barbershops, salons, and clinics to manage reservations efficiently. The system features fully automated workflows with SMTP email notifications and Twilio WhatsApp integration, handling client confirmations and responses automatically. Containerized with Docker and deployed on Cloudflare and Railway for scalability and reliability, Reservo demonstrates enterprise-level architecture with tenant isolation, real-time communication, and seamless automation.
+                        <a href="https://reservo-tani.com" target="_blank">Visit Live Site</a>.
                         </p>
                     </div>
                 </div> <!-- entry -->
 
-                <div class="column entry">
+<div class="column entry">
                     <a href="images/folio/stockprediciton.png" class="entry__link glightbox" data-glightbox="title: Stock Prediction; description: .entry__desc-06">
                         <div class="entry__thumb">
                             <img src="images/folio/stockprediciton.png" alt="Stock Prediction Project">
@@ -419,19 +500,19 @@
                 </div> <!-- entry -->
 
                 <div class="column entry">
-                    <a href="images/folio/reservations.png" class="entry__link glightbox" data-glightbox="title: Reservation Management System; description: .entry__desc-12">
+                    <a href="images/folio/bird.png" class="entry__link glightbox" data-glightbox="title: Bird Game; description: .entry__desc-12">
                         <div class="entry__thumb">
-                            <img src="images/folio/reservations.png" alt="Reservation Management System Project">
+                            <img src="images/folio/bird.png" alt="Bird Game Project">
                         </div>
                         <div class="entry__info">
-                            <h4 class="entry__title">Reservation Management System</h4>
+                            <h4 class="entry__title">Bird Game</h4>
                         </div>
                     </a>
 
                     <div class="glightbox-desc entry__desc-12">
                         <p>
-                        A full-stack reservation management platform built with React.js, Django REST Framework, MySQL, and Celery, featuring JWT authentication, role-based access control, and automated email workflows. The system includes an interactive booking interface with date/time pickers, comprehensive admin dashboard for user and reservation management, and automated HTML email notifications with fallback mechanisms. Containerized with Docker for deployment, it demonstrates modern web development practices including modular React components, RESTful APIs, asynchronous task processing, and responsive design.
-                        <a href="https://github.com/Blend06/Reservation_System">View on GitHub</a>.
+                        An interactive bird-themed game that challenges players with engaging gameplay mechanics. Built with modern game development technologies, the game features smooth animations, responsive controls, and progressive difficulty levels. Players navigate through various obstacles while collecting points and power-ups, creating an addictive gaming experience suitable for all ages.
+                        <a href="https://github.com/Blend06/Birds_Game">View on GitHub</a>.
                         </p>
                     </div>
                 </div> <!-- entry -->
